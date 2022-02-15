@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <script src="timer.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="timer">
+        <div id="timer-1"></div>
+    </div>
+    <div class="timer">
+        <div id="timer-2"></div>
+    </div>
+
+    <script>
+
+        // callback function to handle some event after time ends or exceed time limit
+        const callback = () => {
+            console.log('callback function called!');
+        }
+
+        // create Timer instance
+        const timer1 = new Timer();
+        // 10800 seconds = 3 hours
+        timer1.set(10800, 'timer-1', callback);
+        //start the timer
+        timer1.start('COUNT_DOWN');
+
+        // create another Timer instance
+        const timer2 = new Timer();
+        timer2.set(3600, 'timer-2', callback);
+        // set limit after which callback function should be called
+        timer2.setTimeLimit(10800);
+        // start the timer
+        timer2.start('COUNT_UP');
+
+    </script>
+
+</body>
+</html>
