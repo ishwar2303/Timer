@@ -102,21 +102,21 @@ class Timer {
 }
 ```
 ### Create a div set attribute id='timer'
-```
+```javascript
 <div id="timer"></div>
 ```
 
 #### Create a callback function which you want to call after
 1. time == 0 in COUNT_DOWN Timer
 2. time limit exceeds in COUNT_UP Timer
-```
+```javascript
 const callback = () => {
     console.log('callback function called from timer');
 }
 ```
 
 ### Create timer instance
-```
+```javascript
 const timer = new Timer();
 ```
 
@@ -124,18 +124,18 @@ const timer = new Timer();
 1. time
 2. dom element id
 3. callback function
-```
+```javascript
 timer.set(10, 'timer', callback);
 ```
 
 # Finally call start function to start the timer
 It takes a string 'COUNT_DOWN' or 'COUNT_UP' by default it is 'COUNT_DOWN'
-```
+```javascript
 timer.start('COUNT_DOWN');
 ```
 
 # To stop timer
-```
+```javascript
 timer.stop();
 ```
 
