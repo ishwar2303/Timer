@@ -102,7 +102,7 @@ class Timer {
 }
 ```
 ### Create a div set attribute id='timer'
-```javascript
+```html
 <div id="timer"></div>
 ```
 
